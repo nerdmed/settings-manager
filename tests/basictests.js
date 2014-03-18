@@ -23,10 +23,13 @@ Tinytest.add("Basics - basic set and get object", function(test) {
     var windowObj = {
         kitchen: "open",
         sleep: "closed",
-        sleep2: 50
+        sleep2: 50,
+        sleep3: null
+
     };
     mySettings.set("window", windowObj);
     test.equal(mySettings.get("window"), windowObj, "Expected to be equal");
+
 
 
 })
