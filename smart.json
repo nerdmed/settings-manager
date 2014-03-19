@@ -4,6 +4,6 @@
     "homepage": "https://github.com/nerdmed/settings-manager",
     "author": "Ahmed Hassan  (http://www.flowkey.com)",
     "version": "0.2.1",
-    "git": "git@github.com:nerdmed/settings-manager.git",
+    "git": "https://github.com/nerdmed/settings-manager.git",
     "packages": {}
 }
