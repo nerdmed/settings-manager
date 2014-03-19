@@ -1,6 +1,8 @@
 // simple 
 mySettings = new SettingsManager({
-    settings: ["lights", "door", "window"] // Array of Setting names
+    settings: ["lights", "door", "window"], // Array of Setting names
+    fixed: true,
+    name: "mySettings1"
 });
 
 Tinytest.add("Basics - basic set and get", function(test) {
@@ -36,9 +38,7 @@ Tinytest.add("Basics - basic set and get object", function(test) {
 
 Tinytest.add("Basics - dynamic set and get", function(test) {
     mySettings = null;
-    mySettings = new SettingsManager({
-        dynamic: true
-    });
+    mySettings = new SettingsManager("mySettings2");
     mySettings.set("foo", 2);
     test.equal(mySettings.get("foo"), 2, "Expected to be equal");
 
@@ -52,7 +52,9 @@ Tinytest.add("Basics - basic set and get + with init", function(test) {
     mySettings = null;
 
     mySettings = new SettingsManager({
+        fixed: true,
         settings: ["lights", "door", "window"],
+        name: "mySettings3",
         init: {
             lights: true,
             door: [true, true, false],
