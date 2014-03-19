@@ -10,7 +10,8 @@ Contributing:
 * If you want to contribute test your changes before doing pull requests
 
 ##Install
-```
+
+
 * Run
 
 ```
@@ -34,6 +35,7 @@ To create a SettingsManager you only have to do the following:
 For having more control and limiting your avaliable Settings you can add the fixed option. 
 
 **Example**
+
 	mySettings = new SettingsManager({
 		name: "mySettings"
 		fixed: true,
@@ -64,6 +66,7 @@ You can Initially Set your values on creation. To do so provide an init key and 
 Often you want your interface to react on changes in your Settings. For this you can easly use the provided Template Helper. Just place your Manager Name as a template helper and pass it the settings as Strings. 
 
 **Example**
+
 	mySettings = new SettingsManager({
 		name: "mySettings"
 		init : {
@@ -75,11 +78,13 @@ Often you want your interface to react on changes in your Settings. For this you
 
 
 **Template**
+
 	<template name="room">
 	  <div id="overview" class="{{mySettings "lights" "door" "window"}}"></div>
 	</template>
 
 By default you will get the following HTML:
+
 	<div id="overview" class="lights-off door-closed window-closed" ></div>
 
 Depending on the type of the Value one of the following pattern is used by default:
@@ -97,7 +102,9 @@ To do so you can use the following Pattern:
 
 ### Custom CSS-Output
 To change the CSS class to fit your needs you can do the following:
+
 **Example**
+
 	mySettgins.css("light", function(newVal){
 		if(newVal == true){
 			return "lights-are-on"
@@ -159,6 +166,7 @@ You can change the value that will get applied by returning a new value
 	})
 
 **Example 2**
+
 To change the value before applying it you have to return the new value. If you dont return anything it will just take the value that was set. If you want to stop in a certain case you can just run this.cancel() anywhere in your before Hook.
 The follwing example will change the value before applying it and running onChanged and afterSet.
 	
@@ -198,6 +206,7 @@ A callback function that will get the old and the new values as parameters.
 
 	
 ### afterSet(name, callback)
+
 **Arguments**
 
 _name:_
