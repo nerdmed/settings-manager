@@ -1,0 +1,9 @@
+{
+    "name": "settings-manager",
+    "description": "Manages your application settings as desired",
+    "homepage": "https://github.com/nerdmed/settings-manager",
+    "author": "Ahmed Hassan  (http://www.flowkey.com)",
+    "version": "0.2.0",
+    "git": "git@github.com:nerdmed/settings-manager.git",
+    "packages": {}
+}
