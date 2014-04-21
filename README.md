@@ -1,5 +1,4 @@
 # Settings Manager
-##Warning: Beta - expect it to change
 
 With this package you can easily manage settings in your application. It works similar to Sessions with some Hooks and a Css Manager for your templates.
 
