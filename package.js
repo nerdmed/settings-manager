@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function(api, where) {
-    api.use(['reactive-dict', 'underscore', 'ejson', 'deps', 'handlebars'], 'client');
+    api.use(['reactive-dict', 'underscore', 'ejson', 'deps', 'ui'], 'client');
     api.add_files(['lib/settings.js'], 'client');
 
     if (api.export)
@@ -11,6 +11,6 @@ Package.on_use(function(api, where) {
 });
 
 Package.on_test(function(api) {
-    api.use(['underscore', 'ejson', 'deps', 'settings-manager', 'handlebars', 'tinytest', 'test-helpers']);
+    api.use(['underscore', 'ejson', 'deps', 'settings-manager', 'spacebars', 'tinytest', 'test-helpers']);
     api.add_files(['tests/basictests.js'], 'client');
 })
