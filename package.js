@@ -5,8 +5,7 @@ Package.describe({
 });
 
 
-Package.onUse(function(api) {
-	api.versionsFrom('METEOR@0.9.0.1');
+Package.on_use(function(api) {
 	api.use(['reactive-dict', 'underscore', 'ejson', 'deps', 'ui'], 'client');
 	api.add_files(['lib/settings.js'], 'client');
 	api.export('SettingsManager');
