@@ -13,6 +13,6 @@ Package.on_use(function(api) {
 
 
 Package.on_test(function(api) {
-	api.use(['underscore', 'ejson', 'deps', 'nerdmed:settings-manager', 'spacebars', 'tinytest', 'test-helpers']);
+	api.use(['underscore', 'ejson', 'deps', 'flowkey:settings-manager', 'spacebars', 'tinytest', 'test-helpers']);
 	api.add_files(['tests/basictests.js'], 'client');
 })
