@@ -8,16 +8,6 @@ Contributing:
 * Please report bugs, i will fix them asap
 * If you want to contribute test your changes before doing pull requests
 
-##Install
-
-
-* Run
-
-```
-mrt add settings-manager
-```
-
-
 
 ##Create new SettingsManager
 To create a SettingsManager you only have to do the following:
@@ -49,7 +39,7 @@ You can Initially Set your values on creation. To do so provide an init key and 
 **Example**
 		
 	mySettings = new SettingsManager({
-		name: "mySettings"
+		name: "mySettings",
 		settings:["lights","door","window"],
 		fixed : true,
 		init : {
@@ -58,6 +48,19 @@ You can Initially Set your values on creation. To do so provide an init key and 
 			window : "closed"
 			}
 	});
+
+
+## Raw Template Helper
+You can define a raw helper name it will return the settings inside an object or as a value if its only one
+	
+	mySettings = new SettingsManager({
+		name: "mySettings",
+		rawHelper: "getSettings"
+	});
+
+**Template**
+
+	  <div id="overview" class="{{getSettings "lights" "door"}}"></div>
 
 ## CSS Manager
 
@@ -74,6 +77,7 @@ Often you want your interface to react on changes in your Settings. For this you
 			window : "closed"
 			}
 	});
+
 
 
 **Template**
