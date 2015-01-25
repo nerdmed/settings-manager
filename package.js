@@ -6,7 +6,7 @@ Package.describe({
 
 
 Package.on_use(function(api) {
-	api.versionsFrom('1.0.3.1');
+	api.versionsFrom('1.0');
 	api.use(['reactive-dict', 'underscore', 'ejson', 'tracker', 'ui'], 'client');
 	api.add_files(['lib/settings.js'], 'client');
 	api.export('SettingsManager');
