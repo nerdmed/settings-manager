@@ -54,8 +54,8 @@ You can Initially Set your values on creation. To do so provide an init key and 
 ## Save Settings 
 You can either save the settings to the localstorage or to the user profile. To do so just add the following option.
 
-	### Saving to the Local Storage 
-	You can use the following options: session (temporary) , persistent
+### Saving to the Local Storage 
+You can use the following options: session (temporary) , persistent
 
 		mySettings = new SettingsManager({
 			name: "mySettings",
@@ -70,7 +70,7 @@ You can either save the settings to the localstorage or to the user profile. To 
 		  * Settings are stored in the localstorage until you reset or change them
 
 
-	##
+### Saving to the Database (User)
 
 
 ## Raw Template Helper
