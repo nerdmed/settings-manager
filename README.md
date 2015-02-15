@@ -1,6 +1,7 @@
-# Meteor Settings Manager
+# Settings Manager
 
-With this package you can easily manage settings in your application. It works similar to Sessions with some Hooks and a Css Manager for your templates.
+With this package you can easily manage settings in your application. It works similar to Sessions with some Hooks and a CSS Manager for your templates.
+The reactive hooks will enable you to easily work with complex behaviours and conditonal variables.
 
 
 Contributing:
@@ -21,7 +22,8 @@ To create a SettingsManager you only have to do the following:
 	 -> true
 
 ##Create fixed settings for better control 
-For having more control and limiting your avaliable Settings you can add the fixed option. 
+For having more control and limiting your avaliable Settings you can add the fixed option.
+It woll not be possible to add new settings to this SettingsManager.
 
 **Example**
 
@@ -48,6 +50,27 @@ You can Initially Set your values on creation. To do so provide an init key and 
 			window : "closed"
 			}
 	});
+
+## Save Settings 
+You can either save the settings to the localstorage or to the user profile. To do so just add the following option.
+
+	### Saving to the Local Storage 
+	You can use the following options: session (temporary) , persistent
+
+		mySettings = new SettingsManager({
+			name: "mySettings",
+			save: "persistent"
+		});
+
+		1. Session (Temporary)
+		  * Guess what. It matches current Meteor implementation
+		  * Settings are set to init values after a page reload
+
+		2. Persistent ReactiveDict
+		  * Settings are stored in the localstorage until you reset or change them
+
+
+	##
 
 
 ## Raw Template Helper

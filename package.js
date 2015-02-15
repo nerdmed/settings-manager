@@ -7,7 +7,7 @@ Package.describe({
 
 Package.on_use(function(api) {
 	api.versionsFrom('1.0');
-	api.use(['reactive-dict', 'underscore', 'ejson', 'tracker', 'ui'], 'client');
+	api.use(['reactive-dict', 'underscore', 'ejson', 'tracker', 'ui', 'robertlowe:persistent-reactive-dict'], 'client');
 	api.add_files(['lib/settings.js'], 'client');
 	api.export('SettingsManager');
 });
