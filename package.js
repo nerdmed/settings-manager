@@ -1,6 +1,6 @@
 Package.describe({
 	summary: "Adding a easy to use settings manager",
-	version: "0.3.5",
+	version: "0.3.6",
 	git: "https://github.com/nerdmed/settings-manager.git"
 });
 
