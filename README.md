@@ -147,6 +147,7 @@ The order of execution is the following:
 ### beforeSet(name, func)
 The beforeSet Hook is called before the Value is applied. Here is a good place to do error checking or to change the value as you like.
 If you return a value it will be passed to onChange and afterSet. If you call this.cancel() the changed will not get applied.
+To change the Value that gets applied just call this.change() and pass the new value.
 
 **Arguments**
 
@@ -165,7 +166,7 @@ You can change the value that will get applied by returning a new value
 		// this will execute before the value is actualy set
 		// you can cancel with this.cancel();
 
-		// if you return a value this will be applied
+		// if you chanage a value this will be applied with this.change(otherValue)
 	})
 
 **Example 2**
@@ -178,7 +179,7 @@ The follwing example will change the value before applying it and running onChan
 		var light = newVal;
 		if(new Date().getHours() < 18) light = false;
 		if(new Date().getHours() > 18) light = true;
-		return light;
+		this.change(light);
 	})
 
 	// if its after 22:00 Clock the lights can not be changed anymore
@@ -187,7 +188,7 @@ The follwing example will change the value before applying it and running onChan
 		var blockLights = false;
 		if(new Date().getHours() > 18) light = true;
 		if(new Date().getHours() > 22) this.cancel();
-		return light;
+		this.change(light);
 	})
 
 ### onChange(name, callback)
