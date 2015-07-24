@@ -1,6 +1,6 @@
 Package.describe({
 	summary: "Adding a easy to use settings manager",
-	version: "0.4.0",
+	version: "0.4.1",
 	name: "flowkey:settings-manager",
 	git: "https://github.com/nerdmed/settings-manager.git"
 });
